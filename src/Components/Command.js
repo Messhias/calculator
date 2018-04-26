@@ -1,10 +1,11 @@
-import React,{Component} from 'react';
+import React from 'react';
 import {
-    Text
+    Button
 } from 'react-native';
 
 export default props => (
-    <Text>
-        Comando
-    </Text>
+    <Button
+        title='Calcular'
+        onPress={() => props.calc}
+    />
 );

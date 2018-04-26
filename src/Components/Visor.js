@@ -1,20 +1,25 @@
-import React,{Component} from 'react';
+import React from 'react';
 import {
-    Text,
     View,
     TextInput,
     StyleSheet
 } from 'react-native';
 
-export default props => (
-    <View>
-        <TextInput
-            style={styles.input}
-            placeholder='Resultado'
-            editable={false}
-        />
-    </View>
-);
+export default class Visor extends React.Component {
+
+    render() {
+        return (
+            <View>
+                <TextInput
+                    style={styles.input}
+                    placeholder='Resultado'
+                    editable={false}
+                    value={this.props.result}
+                />
+            </View>
+        );
+    }
+}
 
 const styles = StyleSheet.create({
     input: {
